@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Missed Element</title>
+</head>
+<body>
+    <script>
+        //сосдание массива на 100 элементов
+        var numbers = [];
+        for (var i=0; i<100; i++){
+            numbers[i]=i+1;
+        }
+
+        //перетасовка элементов массива
+        function compareRandom(a, b) {
+            return Math.random() - 0.5;
+        }
+        numbers.sort(compareRandom);
+        
+        //случайный выбор индекса элемента, который будет удалён
+        var missElem = Math.floor(Math.random() * 9 + 1); 
+
+        //замена случайно выбраного элемента на 0
+        // document.write('Number ' + numbers[missElem] + ' will be replaced by "0" <br>');
+        numbers[missElem] = 0;
+        console.log(numbers);
+        
+        //нахождение пропущенного элемента без использования условных операторов и дополнительных циклов
+        var sumReal = 0;
+        var sumTaget = 0;
+        for (var i=0; i<numbers.length; i++){
+            //нахождение суммы всех элементов данного массива
+            sumReal += numbers[i]; 
+            //нахождение суммы чисел от 1 до 100
+            sumTaget += i+1;
+        }
+        //нахождение пропущенного элемента
+        var missedElement = sumTaget - sumReal;
+        document.write(missedElement);
+    
+    </script>
+    
+</body>
+</html>
