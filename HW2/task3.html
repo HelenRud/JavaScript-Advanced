@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task #3</title>
+</head>
+<!-- Добавление/удаление элементов при нажатии на кнопку -->
+
+<body>
+    <style>
+        #leftSide {
+            width: 20%;
+            float: left;
+        }
+    </style>
+
+    <div id='leftSide'>
+        <h1>Paragraphs:</h1>
+        <div id="mainBlock"></div>
+    </div>
+    
+    <button id='parCreate' onclick="addParagraph();">Create new element</button>
+</body>
+
+<script>
+    var n = 0;
+    function addParagraph() {
+        n++;
+        var mainBlock = document.getElementById('mainBlock');
+        if (n <= 10) {
+            var newP = document.createElement('p');
+            newP.innerHTML = 'New paragraph';
+            mainBlock.appendChild(newP);
+        }
+        else {
+            while (mainBlock.firstChild) {
+                mainBlock.removeChild(mainBlock.firstChild);
+            }
+            n = 0;
+        }
+    }
+</script>
+
+</html>
