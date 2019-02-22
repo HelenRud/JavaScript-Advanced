@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>HW 21.02 task2</title>
+
+</head>
+
+<body>
+    <!-- способ № 1 -->
+    <div id='squareGroup'>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+    </div>
+
+    <!-- способ № 2 -->
+    <!-- <div id='squareGroup'><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div></div> -->
+
+    <div id='btn'>
+        <input type='button' id="changeColor" onclick="changeColor();" value="Press to select square">
+    </div>
+
+    <script>
+        var curentSq = null;
+        var par = document.getElementById('squareGroup');
+        var sqNum = par.children.length - 1;
+        var sqArray = [];
+        var j = 0;
+
+        //    способ № 1 (div - элементы отформатированы(в столбик))
+        function squareArray() {
+            for (var i = 0; i < par.childNodes.length; i++) {
+                if (par.childNodes[i].nodeType == 1) {
+                    sqArray[j] = par.childNodes[i];
+                    j++;
+                } else continue;
+            } return sqArray;
+        }
+
+        squareArray();
+        function changeColor() {
+
+            if (j == 0 || j == sqArray.length) {
+                j = 0;
+                sqArray[0].style.backgroundColor = "green";
+                sqArray[sqArray.length - 1].style.backgroundColor = "red";
+                j++;
+            }
+            else {
+                sqArray[j - 1].style.backgroundColor = "red";
+                sqArray[j].style.backgroundColor = "green";
+                j++;
+            }
+        }
+
+         // способ № 2 (div - элементы НЕ отформатированы(размещены в строку))
+
+        // function changeColor() {
+        //     if (curentSq == null) {
+        //         curentSq = par.firstChild;
+        //         curentSq.style.backgroundColor = "green";
+        //         par.childNodes[sqNum].style.backgroundColor = 'red';
+        //     }
+        //     if (curentSq.previousSibling != null) {
+        //         curentSq.previousSibling.style.backgroundColor = 'red';
+        //     }
+        //     if (curentSq != null) {
+        //         curentSq.style.backgroundColor = "green";
+        //     }
+        //     curentSq = curentSq.nextSibling;
+
+        // }
+    </script>
+</body>
+
+</html>
