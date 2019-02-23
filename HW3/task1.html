@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task1</title>     
+   
+    <!-- HW3
+     1. Аббревиатура
+     2. Каждое слово с заглавной буквы -->
+
+    <script>
+        window.onload = function (){
+            var span = document.getElementsByTagName('span')[0];
+            var h1 = document.getElementsByTagName('h1')[0];
+            var h2 = document.getElementsByTagName('h2')[0];
+            var str = span.innerHTML;
+            var substr = str.split(' ');
+            for (var i=0; i<substr.length; i++){
+                getSymb= substr[i].split('');
+                console.log(getSymb);
+                h1.innerHTML += getSymb[0].toUpperCase();
+                h2.innerHTML += getSymb[0].toUpperCase();
+                for (j=1; j<getSymb.length; j++) {
+                    h2.innerHTML += getSymb[j];
+                }
+                h2.innerHTML += ' ';
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <span>hyper text markup language</span>
+    <h1></h1>
+    <h2></h2>
+</body>
+</html>

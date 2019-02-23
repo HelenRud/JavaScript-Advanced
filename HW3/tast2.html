@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>HW 21.02 task2</title>
+    <style>
+        .square {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            float: left;
+            margin: 20px;
+        }
+        button{
+            margin: 20px 150px;
+        }
+
+        #btn {
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='squareGroup'>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+        <div class='square'></div>
+    </div>
+
+    <div id='btn'>
+        <input type='button' id="changeColorForward" onclick="stopMove(); changeColorForward();"
+            value="Press to select square">
+        <input type='button' id="forvard" onclick="stopMove(); forward();" value="Press to start forward">
+        <input type='button' id="back" onclick="stopMove(); back();" value="Press to start back">
+        <button onclick="stopMove();" style="display:block;">Stop moving</button>
+    </div>
+
+    <script>
+        var curentSq = null;
+        var par = document.getElementById('squareGroup');
+        var sqNum = par.children.length - 1;
+        var sqArray = [];
+        var j = 0;
+        squareArray();
+        function clearColor(){
+            for(var i=0; i<sqArray.length; i++){
+                sqArray[i].style.backgroundColor = "red"; 
+            }
+        }
+
+      function squareArray() {
+            for (var i = 0; i < par.childNodes.length; i++) {
+                if (par.childNodes[i].nodeType == 1) {
+                    sqArray[j] = par.childNodes[i];
+                    j++;
+                } else continue;
+            }
+            return sqArray;
+        }
+
+        function changeColorForward() {
+            clearColor();
+            if (j == 0 || j == sqArray.length) {
+                j = 0;
+                sqArray[0].style.backgroundColor = "green";
+                j++;
+            }
+            else {
+                sqArray[j].style.backgroundColor = "green";
+                j++;
+            }
+        }
+        // j=sqArray.length - 1;
+        function changeColorBack() {
+
+            clearColor();
+            if (j==sqArray.length - 1 || j<0) {
+                j=sqArray.length - 1;
+                sqArray[j].style.backgroundColor = "green";
+                j--;
+            }
+            else{
+             sqArray[j].style.backgroundColor = "green";
+             j--;
+            }
+       }
+
+           
+        var backInt;
+        function back() {
+            j=sqArray.length - 1;
+            backInt = setInterval(changeColorBack, 1000);
+
+        }
+
+        var forw;
+        function forward() {
+            j=0;
+            forw = setInterval(changeColorForward, 1000);
+        }
+
+        function stopMove() {
+            clearInterval(forw);
+            clearInterval(backInt);
+        }
+
+    </script>
+</body>
+
+</html>
