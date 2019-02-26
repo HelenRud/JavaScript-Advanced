@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Moving</title>
+    <!-- Передвижение блока нажатием мыши -->
+    <style>
+    div{
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: relative;
+        margin: 200px auto;
+    }
+    button{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+    }
+    img{
+        width: 35px;
+    }
+    </style>
+    <script>
+    window.onload = function(){
+        var up=document.getElementById('up');
+        var l=document.getElementById('left');
+        var d=document.getElementById('down');
+        var r=document.getElementById('right');
+        var box = document.getElementsByTagName('div')[0];
+        var top = 0;
+        var left= 0;
+        up.onclick = function (){
+            top -= 20; 
+           box.style.top = top + 'px';   
+        }
+        d.onclick = function (){
+            top += 20; 
+           box.style.top = top + 'px';   
+        }
+        r.onclick = function (){
+            left += 20; 
+           box.style.left = left + 'px';   
+        }
+        l.onclick = function (){
+            left -= 20; 
+           box.style.left = left + 'px';   
+        }
+    }
+    </script>
+        
+</head>
+<body>
+    <button id='up' style="top: 15px; left: 75px"><img src="img\up.png" alt=""></button>
+    <button id='left' style="top: 65px; left: 20px"><img src="img\left.png" alt=""></button>
+    <button id='down' style="top: 115px; left: 75px"><img src="img\down.png" alt=""></button>
+    <button id='right' style="top: 65px; left: 130px"><img src="img\right.png" alt=""></button>
+    <div></div>
+</body>
+</html>
