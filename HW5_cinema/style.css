@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Laila', serif;
+    
+}
+html, body {
+    height: 100%;
+    color: white; 
+  }
+#header{
+    width: 100%;
+    height: 130px;
+    background:radial-gradient(ellipse, #e699ff,#9900cc);
+    border: 2px solid #9900cc;
+}
+#price{
+
+    width: 30%;
+    float: left;
+}
+#title{
+    width: 40%;
+    margin: 20px auto;
+    float: left; 
+}
+#saleBaner {
+    width: 30%;
+    float: left;
+}
+#saleBaner > img{
+    width: 100px;
+}
+
+#leftForm, #rightForm{
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to bottom, #9900cc, #e699ff);
+    float: left;
+}
+#centerForm{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    float: left;
+    border-bottom: 2px solid #9900cc;
+}
+#centerBlocks{
+    height: 450px;
+}
+#centerForm > h2, h3{
+    color:#600080;
+    font-weight: bold;
+}
+#centerForm > h3 {
+    visibility: hidden;
+    
+}
+#submitBlock{
+    width: 100%;
+    height: 80px;
+    background-color:#e699ff;
+}
+#submit >div> img{
+    width: 60px;
+    vertical-align: text-bottom;
+    float: left;
+}
+footer{
+    background: linear-gradient(to bottom, #e699ff, #9900cc);
+    width: 100%;
+    height: 120px;
+    border-top: 2px solid #9900cc;  
+}
+
+#screen{
+    margin: 10px auto;
+    text-align: center;
+}
+#r1_2, #submit{
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
+#r3_4{
+    width: 75%;
+    margin: 0 auto;
+    clear: both;
+}
+#places>div>div{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    float: left;
+    background-color: green;
+}
+h1, h2, h3{
+    text-align: center;
+    clear: both;
+}
+
+h3{
+    padding-top: 30px;
+}
+
+h4{
+    width: 200px;
+    margin-top: 50px;
+    float:left;
+}
+#price > h4{
+    padding-left: 50px;
+}
+
+#leftForm>label{
+    margin: 10px 0px 10px 20px;
+    width: 300px;
+    display: block;
+}
+
+#snacks > div:nth-child(n) > label > img{
+    width: 50px;
+    vertical-align: middle;
+}
+
+#leftForm>input{
+    margin-left: 20px;
+    color: black;
+}
+#snacks{
+    width: 50%;
+    margin: 10px 50px;
+}
+
+#centerBlocks > div:nth-child(n)>h2 {
+    margin-top: 40px;
+}
+#submit > div{
+    width: 200px;
+    float: left;
+}
+#toPay{
+    width: 150px;
+    margin-top: 30px;
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#submitBtn{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+#contacts{
+    width: 300px;
+    padding: 20px 50px;
+}
+
+

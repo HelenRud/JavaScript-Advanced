@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cinema</title>
+</head>
+<body>
+    <div id='header'>
+        <div id='price'>
+            <h4>Ticket price: <span>50 uah</span></h4>
+        </div>
+        <div id='title'>
+            <h1>Cinema</h1>
+            <h2>Tickets order</h2>
+        </div>
+        <div id='saleBaner'>
+            <h4>To buy more than 5 tickets and get a discount!!!</h4>
+            <img src="img\sale.png" alt="">
+        </div>
+    </div>
+<div id='main'>
+
+<form action="">
+    <div id='centerBlocks'>
+    <div id='leftForm'>
+        <h2>Fill the form</h2>
+        <label for="orderName">Name (A-z):</label>
+        <input type="text" id='orderName' data-chars-allowed="abcdefghijklmnopqrstuvwxyz " data-message-id="firstNameError"><span style='color:red;'>*</span>
+
+        <label for="address">Address (A-z, 0-9,.-/):</label>
+        <input type="text" id='address' data-chars-allowed="abcdefghijklmnopqrstuvwxyz0123456789,.-/ "><span style='color:red;'>*</span>
+
+        <label for="phone">Phone number:</label>
+        <input type="text" id='phone' placeholder="+38(___)___-__-__"><span style='color:red;'>*</span>
+
+        <label for="date">Date:</label>
+        <input type="date" id='date'><span style='color:red;'>*</span>
+
+        <label for="time">Time:</label>
+        <input type="time" id='time'><span style='color:red;'>*</span>
+    </div>
+    <div id='centerForm'>
+        <h2>Select at least one place</h2>
+        <div id='screen'><img src="img\screen.png" alt=""></div>
+        <div id='places'>
+            <div id='r1_2'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id='r3_4'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <h3>You have a discount <span  style='color:red;'>-50 ₴</span> !!!</h3>
+    </div>
+    <div id='rightForm'>
+            <h2>Snacks</h2>
+            <div id='snacks'>
+                <div>
+                    <input type="checkbox" id='cola' value="20">
+                    <label for="cola"><img src="img\cola.png" alt="">20 ₴</label>
+                </div>
+                <div>
+                    <input type="checkbox" id='popCorn' value="30">
+                    <label for="popCorn"><img src="img\popcorn.png" alt="">30 ₴</label>
+                </div>
+                <div>
+                    <input type="checkbox" id='iceCream' value="30">
+                    <label for="iceCream"><img src="img\icecream.png" alt="">30 ₴</label>
+                </div>
+                <div>
+                    <input type="checkbox" id='chocolate' value="30">
+                    <label for="chocolate"><img src="img\chocolate.png" alt="">30 ₴</label>
+                </div>
+                <div>
+                    <input type="checkbox" id='chips' value="30">
+                    <label for="chips"><img src="img\chips.png" alt="">30 ₴</label>
+                </div>
+                <div>
+                    <input type="checkbox" id='beer' value="30">
+                    <label for="beer"><img src="img\beer.png" alt="">30 ₴</label>
+                    </div>
+            </div>
+
+    </div>
+    </div>
+    <div id='submitBlock'>
+    <div id='submit'>
+        <div>
+          <img src="img\shopping.png" alt="">
+          <div id='toPay'>
+             <span id='bill'>0</span><span id='hrn'> ₴</span>
+          </div>
+        </div>
+      <input id='submitBtn' type="submit" value="Order">  
+    </div>
+    </div>
+</form>
+<footer>
+    <div id='contacts'>
+        <p>Address: Kiev</p>
+        <p>Phone: +38(050)-123-45-67</p>
+    </div>
+</footer>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
