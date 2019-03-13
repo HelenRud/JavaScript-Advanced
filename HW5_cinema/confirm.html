@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Confirmation screent</title>
+</head>
+
+<body>
+    <div id='header'>
+        <div id='title'>
+            <h1>Confirmation order</h1>
+        </div>
+
+    </div>
+    <div id=mainConf>
+    <div id='leftConf'>
+        <h3>Enter phone number to search order:</h3>
+        <input id='search' type="text" placeholder="+38(___)___-__-__">
+        <input type="button" id='btnSearch' value="Search">
+        <input type="button" id='btnDel' value="Delete">
+    </div>
+    <div id='centerForm'>
+        <h2>Please, check order data:</h2>
+        <form action="" name='orderConf'>
+            <div id='dataConf'>
+                <p>Name: <span></span> </p>
+                <p>Address: <span></span> </p>
+                <p>Phone number: <span></span></p>
+                <p>Date: <span></span></p>
+                <p>Time: <span></span></p>
+                <p>Number of tickets: <span></span></p>
+                <p>Snacks: <span></span></p>
+                <hr align="center" width="80%" size="3px" color="#9900cc" />
+                <p>To pay: <span></span> ₴</p>
+
+                
+            </div>
+        </form>
+    </div>
+    <div id='rightForm'>
+        <input type="button" id='btnAllOrders' value="Display all orders">
+        <textarea rows="5" cols="30" name="text" id='orderList'></textarea>
+    </div>
+</div>
+    <div id='backSubmBtn'>
+        <input type='button' id='back' value='Back'>
+        <input type="submit" id='sub' value='Send order'>
+    </div>
+    <footer>
+        <div id='contacts' style="clear:both">
+            <p>Address: Kiev</p>
+            <p>Phone: +38(050)-123-45-67</p>
+        </div>
+    </footer>
+
+    <script src='confirm.js'></script>
+</body>
+
+</html>
