@@ -1,0 +1,30 @@
+body{
+    background: url('img/background_2.jpg');
+}
+#screen{
+    width: 500px;
+    height: 400px;
+    margin: 30px auto;
+    border: 1px solid black;
+    background: lightgrey
+}
+img{
+    width: 500px;
+    height: 400px; 
+    position: absolute;
+}
+#btns{
+    text-align: center;
+}
+
+.hide{
+    opacity: 0;
+    transition: .8s;
+
+}
+.show{
+    opacity: 1;
+    transition: .8s;
+
+
+}
