@@ -1,33 +1,10 @@
 var body = document.getElementsByTagName('body')[0];
-// var mainBlock = document.createElement('div');
-// var poster = document.createElement('div');
-// var title = document.createElement('div');
-// var date = document.createElement('div');
-// var description = document.createElement('div');
-// var rate = document.createElement('div');
-// var hrLine = document.createElement('div');
-// mainBlock.classList.add('mainBlock');
-// poster.classList.add('poster');
-// title.classList.add('data');
-// date.classList.add('data');
-// description.classList.add('data');
-// rate.classList.add('data');
-// hrLine.classList.add('hrLine');
-// body.appendChild(mainBlock);
-// mainBlock.appendChild(poster);
-// mainBlock.appendChild(title);
-// mainBlock.appendChild(date);
-// mainBlock.appendChild(description);
-// mainBlock.appendChild(rate);
-// body.appendChild(hrLine);
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a");
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-        // JSON.parse - преобразование в объект строки полученной с сервера.
           data = JSON.parse(xhr.responseText);
-    //    console.log(data.results[0].title);
     }
 }
 xhr.send();
@@ -66,10 +43,7 @@ function displayMovie(){
         mainBlock.appendChild(date);
         mainBlock.appendChild(description);
         mainBlock.appendChild(rate);
-        body.appendChild(hrLine);
-        
-        
+        body.appendChild(hrLine);   
     }
-    console.log('https://image.tmdb.org/t/p/w500_and_h282_face' + data.results[0].poster_path);
-    console.log(data.results[0]);
+ 
 }
