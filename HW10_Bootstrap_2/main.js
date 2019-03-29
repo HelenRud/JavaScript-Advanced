@@ -1,8 +1,73 @@
-$('.carousel').carousel({
-    interval: 2000
-  });
 
-  (function() {
+$(document).ready(function(){
+    $( "#dialog" ).dialog({
+        autoOpen: false,
+        width: 400,
+        buttons: [
+            {
+                text: "Ok",
+                click: function() {
+                    $( this ).dialog( "close" );
+                }
+            },
+            {
+                text: "Cancel",
+                click: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        ]
+    });
+    
+    
+    // Link to open the dialog
+    $( "#dialog-link" ).click(function( event ) {
+        $( "#dialog" ).dialog( "open" );
+        event.preventDefault();
+    });
+    
+    $( "#datepicker" ).datepicker({
+        inline: true
+    });
+
+    $( function() {
+        $( "#datepickerInp, #datepickerInp2" ).datepicker();
+      } );
+
+    $(document).ready(function(){
+        $( "#dialog2" ).dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+                {
+                    text: "Cancel",
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+            ]
+        });
+        
+        
+        // Link to open the dialog
+        $( "#dialog-link2" ).click(function( event ) {
+            $( "#dialog" ).dialog( "open" );
+            event.preventDefault();
+        });
+        
+        $( "#datepicker2" ).datepicker({
+            inline: true
+        });
+    
+    });
+
+    (function() {
     'use strict';
     window.addEventListener('load', function() {
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -19,3 +84,9 @@ $('.carousel').carousel({
       });
     }, false);
   })();
+
+  
+
+});
+
+

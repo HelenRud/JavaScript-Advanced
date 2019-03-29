@@ -1,6 +1,15 @@
-#logo, #search{
+#datepicker > div > table > thead, p{
+    color: #444444;
+}
+#logo, #search, .calend{
     width: 60%;
-    height: 60%;
+}
+
+.calend{
+    width: 40%;
+}
+.dep{
+    width: 10%;
 }
 body{
     background: lightcyan;
